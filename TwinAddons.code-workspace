@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "dotnet.defaultSolution": "TwinAddons.sln"
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-dotnettools.csharp",
+      "ms-vscode.powershell"
+    ]
+  }
+}

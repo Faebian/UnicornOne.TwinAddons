@@ -1,0 +1,76 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Twin addons (Debug)",
+      "type": "shell",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\Build-TwinAddons.ps1",
+        "-Configuration",
+        "Debug"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$msCompile"
+      ]
+    },
+    {
+      "label": "Build Twin addons (Release)",
+      "type": "shell",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\Build-TwinAddons.ps1",
+        "-Configuration",
+        "Release"
+      ],
+      "group": "build",
+      "problemMatcher": [
+        "$msCompile"
+      ]
+    },
+    {
+      "label": "Deploy Twin addons (Debug)",
+      "type": "shell",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\Deploy-TwinAddons.ps1",
+        "-Configuration",
+        "Debug"
+      ],
+      "dependsOn": "Build Twin addons (Debug)",
+      "problemMatcher": []
+    },
+    {
+      "label": "Deploy Twin addons (Release)",
+      "type": "shell",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\Deploy-TwinAddons.ps1",
+        "-Configuration",
+        "Release"
+      ],
+      "dependsOn": "Build Twin addons (Release)",
+      "problemMatcher": []
+    }
+  ]
+}

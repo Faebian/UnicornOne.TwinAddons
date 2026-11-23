@@ -1,0 +1,60 @@
+# UnicornOne TwinAddons - C# 7.3 / .NET Framework 4.7.2
+# Generated build output for all projects
+**/bin/
+**/obj/
+
+# Local compiled host contract assembly (refreshed by Build-TwinAddons.ps1)
+/References/*.dll
+/References/*.pdb
+/References/*.xml
+/References/*.exe
+# Keep References/README.txt tracked
+
+# Visual Studio / MSBuild user-specific files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.csproj.user
+
+# VS Code: keep repository tasks and extension recommendations
+.vscode/.cache/
+.vscode/*.log
+.vscode/settings.json
+.vscode/launch.json
+.history/
+
+# JetBrains / Rider and other editor local state
+.idea/
+*.DotSettings.user
+
+# NuGet packages from legacy solutions (packages.config workflow)
+packages/
+
+# Logs, temp files and local tooling output
+*.log
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+*.rej
+*.cache
+TestResults/
+coverage/
+.artifacts/
+artifacts/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pfx
+*.snk
